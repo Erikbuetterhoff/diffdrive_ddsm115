@@ -256,13 +256,13 @@ hardware_interface::return_type DiffDriveDDSM115Hardware::read(
   double wheel_vel = commsDDSM_.responseData.velocity;
   
 
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Position Now (angle) is: %f", wheel_pos);
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Position Now (rads) is: %f", wheel_l_.degrees_to_radians(wheel_pos) );
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Accumulated (angle) is: %f", wheel_l_.calculate_accumulated_position(wheel_pos) );
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Position Now (angle) is: %f", wheel_pos);
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Position Now (rads) is: %f", wheel_l_.degrees_to_radians(wheel_pos) );
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Accumulated (angle) is: %f", wheel_l_.calculate_accumulated_position(wheel_pos) );
 
   
   wheel_l_.pos_rads = wheel_l_.degrees_to_radians(wheel_l_.calculate_accumulated_position(wheel_pos));
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Accumulated (rads) is: %f", wheel_l_.pos_rads );
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "L Accumulated (rads) is: %f", wheel_l_.pos_rads );
   wheel_l_.vel = wheel_l_.rpm_to_rad_per_sec(wheel_vel);
   
 
@@ -273,8 +273,8 @@ hardware_interface::return_type DiffDriveDDSM115Hardware::read(
 
   wheel_r_.pos_rads = wheel_r_.degrees_to_radians(-wheel_r_.calculate_accumulated_position(wheel_pos));
   wheel_r_.vel = wheel_r_.rpm_to_rad_per_sec(wheel_vel);
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "R Position is: %f", wheel_r_.pos);
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "R Velocity is: %f", wheel_r_.vel);
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "R Position is: %f", wheel_r_.pos);
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "R Velocity is: %f", wheel_r_.vel);
 
 
 //  if (!mcuComms_.connected())
@@ -301,8 +301,8 @@ hardware_interface::return_type diffdrive_ddsm115 ::DiffDriveDDSM115Hardware::wr
   {
     return hardware_interface::return_type::ERROR;
   }
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "Write L ID:%d cmd:%f", wheel_l_.id, wheel_l_.cmd);
-//  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "Write R ID:%d cmd:%f", wheel_r_.id, wheel_r_.cmd);
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "Write L ID:%d cmd:%f", wheel_l_.id, wheel_l_.cmd);
+  RCLCPP_INFO(rclcpp::get_logger("DiffDriveDDSM115Hardware"), "Write R ID:%d cmd:%f", wheel_r_.id, wheel_r_.cmd);
   commsDDSM_.set_ddsm115_velocity(wheel_l_.id, wheel_l_.cmd*10, 3);
   commsDDSM_.set_ddsm115_velocity(wheel_r_.id, -wheel_r_.cmd*10, 3);
 

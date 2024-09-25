@@ -216,8 +216,8 @@ class DDSM115Comms
         }
 
         responseData.error = responseBuffer[8];
-//        std::cout << "Angle of motor " << responseData.angle << " degrees." << std::endl;
-//        std::cout << "Current of motor " << responseData.current << " amps." << std::endl;
+        std::cout << "Angle of motor " << responseData.angle << " degrees." << std::endl;
+        std::cout << "Current of motor " << responseData.current << " amps." << std::endl;
     }
 
     void set_ddsm115_mode(uint8_t motor_id, ddsm115_mode_t mode)
