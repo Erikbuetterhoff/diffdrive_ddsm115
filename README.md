@@ -1,8 +1,10 @@
 # Eigene Notizen
 nach clonen vor `colcon build --symlink-install`
 - `sudo apt install ros-${ROS_DISTRO}-hardware-interface`
+  
 fuer serielle Bib
 - `sudo apt install libserial-dev`
+  
 Controller Starten
 - `source install/setup.bash`
 - `ros2 launch diffdrive_ddsm115 diffbot.launch.py`
