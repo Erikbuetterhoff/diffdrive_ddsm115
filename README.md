@@ -1,3 +1,9 @@
+# Eigene Notizen
+nach clonen vor colcon build
+- "udo apt install ros-${ROS_DISTRO}-hardware-interface"
+
+
+
 # diffdrive_ddsm115
 
 
