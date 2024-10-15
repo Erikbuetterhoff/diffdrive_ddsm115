@@ -22,11 +22,11 @@ diffbot_base_controller:
 
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
-    wheel_separation: 0.16
-    wheel_radius: 0.05
+    wheel_separation: 0.34 #angepasst an meinen Prototypen
+    wheel_radius: 0.05 
 
-    # use_stamped_vel: false
-    use_stamped_vel: true
+    use_stamped_vel: false
+    #use_stamped_vel: true
 
     # open_loop: false    
 

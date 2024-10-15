@@ -50,7 +50,7 @@ struct Config
   std::string device = "";
   int baud_rate = 115200;
   int timeout_ms = 0;
-  int left_wheel_id = 0;
+  int left_wheel_id = 1;
   int right_wheel_id = 2;
 //    std::string imu_device = "";
 //    int imu_baud_rate = 57600;
