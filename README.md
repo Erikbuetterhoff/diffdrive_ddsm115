@@ -2,8 +2,13 @@
 nach clonen vor `colcon build --symlink-install`
 - `sudo apt install ros-${ROS_DISTRO}-hardware-interface`
   
-install serielle Bib
+Install serielle Bib
 - `sudo apt install libserial-dev`
+
+Abhangigkeiten herstellen
+- `rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+` 
   
 Launch Diffdrive
 - `source install/setup.bash`
