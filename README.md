@@ -1,7 +1,9 @@
 # Eigene Notizen
 nach clonen vor `colcon build --symlink-install`
-- `udo apt install ros-${ROS_DISTRO}-hardware-interface`
-- 
+- `sudo apt install ros-${ROS_DISTRO}-hardware-interface`
+fuer serielle Bib
+- `sudo apt install libserial-dev`
+ 
 
 
 # diffdrive_ddsm115
